@@ -1,0 +1,324 @@
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block
+}
+ol,
+ul {
+  list-style: none
+}
+blockquote,
+q {
+  quotes: none
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+* {
+  box-sizing: border-box
+}
+html {
+  font-size: 62.5%
+}
+body {
+  line-height: 1;
+  font-family: sans-serif;
+  font-size: 1.1rem
+}
+.main {
+  position: relative;
+  width: 970px;
+  height: 250px;
+  background-image: url(../img/loading.jpg);
+  border: 1px solid #000;
+  overflow: hidden
+}
+.close {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  cursor: pointer
+}
+.close span {
+  position: relative;
+  top: -9px;
+  left: 2px;
+  text-decoration: underline
+}
+.cta,
+.followTo,
+.full-size,
+.highlights,
+.logo,
+.text,
+.text-slider {
+  position: absolute;
+  z-index: 1;
+  width: 970px;
+  height: 250px;
+  transition: .3s ease;
+  pointer-events: none
+}
+.logo {
+  background-image: url(../img/logo.png)
+}
+.text {
+  opacity: 0
+}
+.text-slider {
+  background-image: url(../img/slider_text.png);
+  opacity: 0;
+  transition: 1s ease
+}
+.cta {
+  background-image: url(../img/cta.png);
+  opacity: 0;
+  transition: 1s ease
+}
+.phone-wrapper {
+  position: relative;
+  top: 260px;
+  left: 268px
+}
+.phone-sprite {
+  position: absolute;
+  z-index: 1;
+  width: 514px;
+  height: 221px;
+  background-image: url(../img/phone_sprite.png);
+  background-position-x: 0;
+  background-position-y: 0;
+  pointer-events: none
+}
+#yt-player {
+  position: absolute;
+  top: 9px;
+  left: 77px;
+  z-index: 1
+}
+.highlights {
+  top: -15px;
+  left: -292px;
+  background-image: url(../img/970x250_highlights.png);
+  opacity: 1;
+  transition: none
+}
+.internals {
+  position: absolute;
+  left: -24px;
+  z-index: 1;
+  width: 970px;
+  height: 250px;
+  background-image: url(../img/internals.png);
+  opacity: 0;
+  pointer-events: none
+}
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 970px;
+  height: 250px;
+  background-image: url(../img/internals_frame.png)
+}
+.card-highlight-wrapper {
+  position: absolute;
+  top: 156px;
+  left: 371px;
+  width: 50px;
+  height: 40px;
+  overflow: hidden
+}
+.card-highlight {
+  position: absolute;
+  top: -37px;
+  left: -150px;
+  width: 140px;
+  height: 108px;
+  background-image: url(../img/card_highlight.png);
+  transform: rotate(-20deg)
+}
+.slider-wrapper {
+  position: absolute;
+  top: 366px;
+  z-index: 2;
+  right: 75px;
+  transform: rotate(90deg);
+  -webkit-appearance: none
+}
+.slider {
+  width: 200px;
+  height: 1px;
+  background: #d3d3d3;
+  -webkit-appearance: none;
+  outline: 0
+}
+.slider::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  border-radius: 50%;
+  background: #000;
+  cursor: move
+}
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  cursor: move
+}
+.followTo {
+  opacity: 0;
+  cursor: pointer;
+  transition: 0s;
+  pointer-events: all
+}
+.flash {
+  position: absolute;
+  top: -66px;
+  left: 217px;
+  z-index: 1;
+  width: 299px;
+  height: 299px;
+  background-image: url(../img/flash.png);
+  opacity: 0;
+  pointer-events: none
+}
+.rain {
+  position: absolute;
+  top: 10px;
+  left: 290px;
+  z-index: 1;
+  pointer-events: none;
+  transition: 1s ease
+}
+.raindrop_1 {
+  position: absolute;
+  width: 30px;
+  height: 28px;
+  background-image: url(../img/raindrop_1.png)
+}
+.raindrop_2 {
+  position: absolute;
+  width: 15px;
+  height: 23px;
+  background-image: url(../img/raindrop_2.png)
+}
+.raindrop_3 {
+  position: absolute;
+  width: 22px;
+  height: 19px;
+  background-image: url(../img/raindrop_3.png)
+}
+.raindrop_4 {
+  position: absolute;
+  width: 15px;
+  height: 24px;
+  background-image: url(../img/raindrop_4.png)
+}

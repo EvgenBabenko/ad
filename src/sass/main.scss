@@ -1,0 +1,352 @@
+//-------------------------------------------
+//---------------RESET
+//-------------------------------------------
+
+//http://meyerweb.com/eric/tools/css/reset/ 
+//v2.0 | 20110126
+// License: none (public domain)
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+
+
+//-------------------------------------------
+//---------------GENERAL
+//-------------------------------------------
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // = 10px
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1.1rem; // = 11px for all by default
+}
+
+
+//-------------------------------------------
+//---------------MAIN
+//-------------------------------------------
+
+$width: 970px;
+$height: 250px;
+
+.main {
+  position: relative;
+
+  width: $width;
+  height: $height;
+
+  background-image: url(../img/loading.jpg);
+  border: 1px black solid;
+
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  z-index: 2;
+  right: 0px;
+
+  cursor: pointer;
+
+  span {
+    position: relative;
+    top: -9px;
+    left: 2px;
+
+    text-decoration: underline;
+  }
+}
+
+.full-size {
+  position: absolute;
+  z-index: 1;
+
+  width: $width;
+  height: $height;
+
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.logo {
+  @extend .full-size;
+  background-image: url(../img/logo.png);
+}
+
+.text {
+  @extend .full-size;
+  opacity: 0;
+}
+
+.text-slider {
+  @extend .full-size;
+  background-image: url(../img/slider_text.png);
+
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.cta {
+  @extend .full-size;
+  background-image: url(../img/cta.png);
+
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.phone-wrapper {
+  position: relative;
+  top: 260px;
+  left: 268px;
+}
+
+.phone-sprite {
+  position: absolute;
+  z-index: 1;
+  
+  /* top: 7px; */
+  /* left: 277px; */
+  width: 514px;
+  height: 221px;
+
+  background-image: url(../img/phone_sprite.png);
+  background-position-x: 0;
+  background-position-y: 0;
+
+  pointer-events: none;
+}
+
+#yt-player {
+  position: absolute;
+  top: 9px;
+  left: 77px;
+  z-index: 1;
+}
+
+.highlights {
+  @extend .full-size;
+  top: -15px;
+  left: -292px;
+
+  background-image: url(../img/970x250_highlights.png);
+
+  opacity: 1;
+  transition: none;
+}
+
+.internals {
+  position: absolute;
+  left: -24px;
+  z-index: 1;
+
+  width: $width;
+  height: $height;
+  
+  background-image: url(../img/internals.png);
+
+  opacity: 0;
+  // top: -14px;
+  pointer-events: none;
+}
+
+.frame {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+
+  width: $width;
+  height: $height;
+
+  background-image: url(../img/internals_frame.png);
+}
+
+.card-highlight-wrapper {
+  position: absolute;
+  top: 156px;
+  left: 371px;
+  // z-index: 0;
+
+  width: 50px;
+  height: 40px;
+
+  // background-color: lightpink;
+  overflow: hidden;
+}
+
+.card-highlight {
+  position: absolute;
+  top: -37px;
+  left: -150px;
+
+  width: 140px;
+  height: 108px;
+
+  background-image: url(../img/card_highlight.png);
+
+  transform: rotate(-20deg);
+  // background-color: #00f;
+}
+
+.slider-wrapper {
+  position: absolute;
+  top: 366px;
+  z-index: 2;
+
+  right: 75px;
+
+  transform: rotate(90deg);
+  -webkit-appearance: none;
+}
+
+.slider {
+  width: 200px;
+  height: 1px;
+
+  background: #d3d3d3;
+  -webkit-appearance: none;
+  outline: none;
+
+  &::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background: black;
+    cursor: move;
+  }
+
+  &::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+
+      border-radius: 50%;
+      background: black;
+      cursor: move;
+    }
+}
+
+.followTo {
+  @extend .full-size;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0s;
+  pointer-events: all;
+  // background-color: grey;
+}
+
+.flash {
+  position: absolute;
+  top: -66px;
+  left: 217px;
+  z-index: 1;
+  
+  width: 299px;
+  height: 299px;
+
+  background-image: url(../img/flash.png);
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rain {
+  position: absolute;
+  top: 10px;
+  left: 290px;
+  z-index: 1;
+
+  pointer-events: none;
+  transition: 1s ease;
+}
+
+.raindrop_1 {
+  position: absolute;
+
+  width: 30px;
+  height: 28px;
+
+  // background-color: red;
+  background-image: url(../img/raindrop_1.png);
+}
+
+.raindrop_2 {
+  position: absolute;
+
+  width: 15px;
+  height: 23px;
+
+  // background-color: yellow;
+  background-image: url(../img/raindrop_2.png);
+}
+
+.raindrop_3 {
+  position: absolute;
+
+  width: 22px;
+  height: 19px;
+
+  // background-color: blue;
+  background-image: url(../img/raindrop_3.png);
+}
+
+.raindrop_4 {
+  position: absolute;
+
+  width: 15px;
+  height: 24px;
+
+  // background-color: black;
+  background-image: url(../img/raindrop_4.png);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Ad</title>
+
+</head>
+<body>
+
+  <div class="main">
+    <div class="close" onclick="closeAd()">
+      <span>Close Ad</span>
+      <img src="img/close_black.png">
+    </div>
+    <div class="followTo"></div>
+    <div class="logo"></div>
+    <div class="text"></div>
+    <div class="text-slider"></div>
+    <div class="cta"></div>
+    <div class="phone-wrapper">
+      
+      <div class="phone-sprite"></div>
+      <div class="highlights"></div>
+      <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+      <div id="yt-player"></div>
+    </div>
+    <div class="rain"></div>
+    <div class="flash"></div>
+    <div class="internals">
+        <div class="frame"></div>
+        <div class="card-highlight-wrapper">
+          <div class="card-highlight"></div>
+        </div>
+      </div>
+    <div class="slider-wrapper">
+      <input class="slider" id="range-1" type="range" name="" step="1" min="0" max="100" value="0" oninput='onSlider()'>
+    </div>
+    <!-- <div class="wrapper">
+      
+    </div> -->
+
+  </div>
+
+  <script src='js/main.js'></script>
+
+</body>
+</html>
