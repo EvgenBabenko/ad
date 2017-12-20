@@ -16,7 +16,7 @@ function init() {
     iframe.style.width = '970px';
     iframe.style.height = '250px';
     iframe.style.border = 'none';
-    iframe.src = 'https://evgenbabenko.github.io/works/ad/build/index.html';
+    iframe.src = 'https://evgenbabenko.github.io/ad/build/index.html';
     iframe.style.display = 'block';
     iframe.style.position = 'absolute';
     iframe.style.top = '20px';
